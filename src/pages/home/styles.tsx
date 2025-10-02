@@ -1,0 +1,138 @@
+import { StyleSheet } from "react-native";
+
+export const style = StyleSheet.create({
+  Logo: {
+    width: 150,
+    height: 140,
+    resizeMode: "contain",
+  },
+  container: {
+    flex: 1,
+  },
+  boxTop: {
+    flex: 0.7,
+    backgroundColor: "#000075c5",
+    width: "100%",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    paddingTop: 30,
+  },
+  searchBar: {
+    width: "90%",
+    height: 40,
+    backgroundColor: "#fff",
+    borderRadius: 15,
+    paddingHorizontal: 15,
+    borderWidth: 1,
+    borderColor: "#ddd",
+  },
+  boxMid: {
+    flex: 1.5,
+    backgroundColor: "#d9d9dac5",
+    width: "100%",
+  },
+  welcomeText: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginLeft: 30,
+    marginTop: 15,
+    marginBottom: 3,
+    color: "#333",
+  },
+  infoText: {
+    fontSize: 12,
+    marginLeft: 30,
+    color: "#444",
+  },
+  boxAppointments: {
+    width: "90%",
+    padding: 38,
+    marginTop: 15,
+    backgroundColor: "#f8f4f4bd",
+    borderWidth: 0,
+    borderRadius: 15,
+    alignSelf: "center",
+  },
+  textAppointments: {
+    fontSize: 12,
+    color: "#797878ff",
+    marginBottom: 1,
+    marginLeft: -15,
+  },
+  bestQuadras: {
+    fontSize: 16,
+    fontWeight: "bold",
+    marginLeft: 30,
+    marginTop: 14,
+    marginBottom: 2,
+    color: "#333",
+  },
+  cardQuadra:{
+    flexDirection: 'row',
+    width: '90%',
+    alignSelf: 'center',
+    backgroundColor: "#f8f4f4bd",
+    borderRadius: 15,
+    padding: 16,
+    marginBottom: 14,
+    alignItems: 'center',
+  },
+  infoQuadra:{
+    flex: 1,
+    justifyContent: 'center',
+    marginTop: -6,
+  },
+  nameQuadra:{
+    fontSize: 14,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 0,
+  },
+  addressQuadra:{
+    flex: 1,
+    fontSize: 12,
+    color: '#797878ff',
+  },
+    ratingsContainer:{
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: -10,
+    marginTop: -5,  
+  },
+  ratingText:{  
+    fontSize: 8,
+    fontWeight: '200',
+    color: '#797878ff',
+    marginLeft: 4,
+
+  },
+  reviewsCount:{
+    fontSize: 8,
+    color: '#797878ff',
+  },
+  Atlanta: {
+    width: 50,
+    height: 50,
+    borderRadius: 90,
+    resizeMode: "contain",
+    marginRight: 15,
+  },
+  boxBotton: {
+    flex: 0.3,
+    backgroundColor: "#000075c5",
+    width: "100%",
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    paddingBottom: 5,
+  },
+  navButton:{
+    alignItems: 'center',
+    padding: 5,
+  },
+  navText:{
+    fontSize: 10,
+    color: '#fff',
+    marginTop: 2,
+  },
+});
