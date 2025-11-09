@@ -14,7 +14,6 @@ export default function App() {
        
         screenOptions={{ headerShown: false }} 
       >
-        {/* 7. Definir quais telas seu app conhece */}
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Quadras" component={Quadras} />
       
