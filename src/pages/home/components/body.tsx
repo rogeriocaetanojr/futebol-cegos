@@ -22,7 +22,7 @@ export default function Body() {
       </Text>
 
       <View style={style.featuresContainer}>
-  {/* Item 1: Perto */}
+
   <View style={style.featureItem}>
     <View style={style.featureIconCircle}>
       <Ionicons name="location-outline" size={30} color="#142c44" />
@@ -30,7 +30,7 @@ export default function Body() {
     <Text style={style.featureText}>Encontre{'\n'}por perto</Text>
   </View>
 
-  {/* Item 2: Reserve */}
+  
   <View style={style.featureItem}>
     <View style={style.featureIconCircle}>
       <Ionicons name="time-outline" size={30} color="#142c44" />
@@ -38,7 +38,6 @@ export default function Body() {
  <Text style={style.featureText}>Reserve em{'\n'}segundos</Text>
   </View>
 
-  {/* Item 3: Amigos */}
   <View style={style.featureItem}>
     <View style={style.featureIconCircle}>
       <Ionicons name="people-outline" size={30} color="#142c44" />

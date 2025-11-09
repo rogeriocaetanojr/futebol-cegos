@@ -5,7 +5,6 @@ import TabBar from "../../components/tabBar";
 import { Ionicons } from "@expo/vector-icons";
 import { style } from "./styles";
 
-// DADOS DE EXEMPLO (MOCK DATA)
 const MOCK_DATA = [
   {
     id: "1",

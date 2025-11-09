@@ -4,7 +4,7 @@ import { style } from "./header.styles";
 import Logo from "../assets/logo.png";   
 
 type HeaderProps = {
-  showSearchBar?: boolean; // '?' torna a prop opcional
+  showSearchBar?: boolean; 
 }
 
 export default function Header({ showSearchBar = false }: HeaderProps) {

@@ -53,7 +53,6 @@ export const style = StyleSheet.create({
     color: "#666",
   },
 
- // Substituindo o 'boxAppointments'
 featuresContainer: {
   flexDirection: 'row',
   justifyContent: 'space-around',
@@ -69,7 +68,7 @@ featureIconCircle: {
   width: 50,
   height: 50,
   borderRadius: 30,
-  backgroundColor: '#ffffffff', // Fundo cinza claro
+  backgroundColor: '#ffffffff', 
   justifyContent: 'center',
   alignItems: 'center',
   marginBottom: 8,
