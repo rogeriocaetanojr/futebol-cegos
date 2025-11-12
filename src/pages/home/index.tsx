@@ -12,7 +12,7 @@ import TabBar from '../../components/tabBar';
 export default function Home() {
   return (
     <View style={style.container}>
-      <Header/>
+      <Header showSearchBar={true} />
       <Body/>
       <TabBar/>
     </View>

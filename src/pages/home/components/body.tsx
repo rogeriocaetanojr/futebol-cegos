@@ -18,7 +18,7 @@ export default function Body() {
     <View style={style.boxMid}>
       <Text style={style.welcomeText}>Bem-Vindo, Gabriel Dembelenda!</Text>
       <Text style={style.infoText}>
-        Atualmente, você não possui nenhum agendamento.
+        Atualmente, você possui 2 agendamentos.
       </Text>
 
       <View style={style.featuresContainer}>

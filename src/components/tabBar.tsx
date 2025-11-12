@@ -1,27 +1,25 @@
 import React from "react";
-import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
-import { useNavigation } from '@react-navigation/native';
-import { style } from "./tabBar.styles"; 
+import { View, Text, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { style } from "./tabBar.styles";
 import { Ionicons } from "@expo/vector-icons";
 
 export default function TabBar() {
-
   const navigation = useNavigation<any>();
 
-  return(
+  return (
     <View style={style.boxBotton}>
-      
       <TouchableOpacity 
         style={style.navButton} 
-        onPress={() => navigation.navigate('Home')} 
+        onPress={() => navigation.navigate("Home")}
       >
         <Ionicons name="home-outline" size={24} color="#fff" />
-        <Text style={style.navText}>Início</Text>
+        <Text style={style.navText}>InÃ­cio</Text>
       </TouchableOpacity>
 
       <TouchableOpacity 
         style={style.navButton} 
-        onPress={() => navigation.navigate('Quadras')} 
+        onPress={() => navigation.navigate("Quadras")}
       >
         <Ionicons name="tablet-landscape-outline" size={24} color="#fff" />
         <Text style={style.navText}>Quadras</Text>
@@ -29,6 +27,7 @@ export default function TabBar() {
       
       <TouchableOpacity 
         style={style.navButton}
+        onPress={() => navigation.navigate("Agendas")}
       >
         <Ionicons name="calendar-outline" size={24} color="#fff" />
         <Text style={style.navText}>Agenda</Text>
@@ -36,11 +35,11 @@ export default function TabBar() {
 
       <TouchableOpacity 
         style={style.navButton}
-    
+        onPress={() => navigation.navigate("Perfil")}
       >
         <Ionicons name="person-outline" size={24} color="#fff" />
         <Text style={style.navText}>Perfil</Text>
       </TouchableOpacity>
     </View>
-  )
+  );
 }

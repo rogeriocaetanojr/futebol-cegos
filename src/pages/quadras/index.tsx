@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
-import Header from "../../components/header";
+import { View, Text, FlatList, TouchableOpacity, Image, TextInput } from "react-native";
 import TabBar from "../../components/tabBar";
 import { Ionicons } from "@expo/vector-icons";
 import { style } from "./styles";
+
+
 
 const MOCK_DATA = [
   {
@@ -89,17 +90,27 @@ export default function Quadras() {
 
   return (
     <View style={{ flex: 1, backgroundColor: "#fff" }}>
-      <Header />
-
+      <View style={style.localHeader}>
+  <Ionicons name="football-outline" size={24} color="#fff" />
+  <Text style={style.headerTitle}>Encontre sua quadra</Text>
+</View>
       <View style={style.bodyContainer}>
-        {/* Filtros */}
+        <View style={style.searchContainer}>
+  <Ionicons name="search-outline" size={20} color="#888" style={style.searchIcon} />
+  <TextInput
+    style={style.searchInput}
+    placeholder="Procure por quadras"
+    placeholderTextColor="#888"
+  />
+</View>
+
         <View style={style.filterContainer}>
           <TouchableOpacity style={style.filterButton}>
             <Text style={style.filterText}>Todos os tipos</Text>
             <Ionicons name="chevron-down-outline" size={16} color="#333" />
           </TouchableOpacity>
           <TouchableOpacity style={style.filterButton}>
-            <Text style={style.filterText}>Todos os tamanhos</Text>
+            <Text style={style.filterText}>Todos tamanhos</Text>
             <Ionicons name="chevron-down-outline" size={16} color="#333" />
           </TouchableOpacity>
         </View>

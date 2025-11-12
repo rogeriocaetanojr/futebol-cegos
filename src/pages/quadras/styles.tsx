@@ -1,11 +1,55 @@
 import { StyleSheet } from "react-native";
+const HEADER_COLOR = '#142c44';
 
 export const style = StyleSheet.create({
+  localHeader: {
+    backgroundColor: HEADER_COLOR,
+    height: 105, 
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: 40,
+  },
+  headerTitle: {
+    color: '#e5e4e4ff',
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginLeft: 10,
+  },
   bodyContainer: {
     flex: 1,
     backgroundColor: "#f4f4f4",
     paddingHorizontal: 20,
   },
+searchContainer: {
+  flexDirection: "row",
+  alignItems: "center",
+  backgroundColor: "#fff",
+  width: "100%",
+  height: 40,
+  borderRadius: 10,
+  paddingHorizontal: 12,
+  borderWidth: 1,
+  borderColor: "#ddd",
+  shadowColor: "#000",
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.1,
+  shadowRadius: 3,
+  elevation: 2,
+  marginBottom: -3,
+  marginTop: 10,
+},
+
+searchIcon: {
+  marginRight: 10,
+},
+
+searchInput: {
+  flex: 1,
+  height: "100%",
+  fontSize: 14,
+  color: "#333",
+},
 
   filterContainer: {
     flexDirection: "row",
@@ -23,11 +67,11 @@ export const style = StyleSheet.create({
     borderRadius: 8,
     paddingVertical: 10,
     paddingHorizontal: 12,
-    width: "48%",
+    width: "49%",
   },
   filterText: {
-    fontSize: 14,
-    color: "#333",
+    fontSize: 13,
+    color: "#807f7fff",
   },
 
   resultsTitle: {
@@ -87,17 +131,17 @@ export const style = StyleSheet.create({
     marginLeft: 5,
   },
   cardPriceColumn: {
-    alignItems: "flex-end",
+    alignItems: "center",
     justifyContent: "center",
     paddingLeft: 10,
   },
   cardPrice: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: "bold",
-    color: "#333",
+    color: "#23c40aff",
   },
   cardPriceLabel: {
     fontSize: 12,
-    color: "#666",
+    color: "#9c9b9bff",
   },
 });

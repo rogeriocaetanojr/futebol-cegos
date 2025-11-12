@@ -1,12 +1,6 @@
 import { StyleSheet } from "react-native";
 
 export const style = StyleSheet.create({
-  Logo: {
-    width: 55,
-    height: 55,
-    resizeMode: "contain",
-  },
-
   container: {
     flex: 1,
     backgroundColor: "#142c44", 
@@ -35,7 +29,7 @@ export const style = StyleSheet.create({
     flex: 1,
     backgroundColor: "#f4f4f4",
     width: "100%",
-    paddingTop: 15,
+    paddingTop: 6,
   },
 
   welcomeText: {
@@ -57,8 +51,8 @@ featuresContainer: {
   flexDirection: 'row',
   justifyContent: 'space-around',
   width: '100%',
-  marginTop: 20,
-  marginBottom: 10,
+  marginTop: 16,
+  marginBottom: 2,
 },
 featureItem: {
   alignItems: 'center',
