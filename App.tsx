@@ -21,7 +21,8 @@ export default function App() {
         <Stack.Screen name="Quadras" component={Quadras} />
         <Stack.Screen name="Agendas" component={Agendas} />
         <Stack.Screen name="Perfil" component={Perfil} />
-     
+        <Stack.Screen name="Contato" component={Contato} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

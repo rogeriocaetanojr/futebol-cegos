@@ -16,38 +16,54 @@ import { Ionicons } from "@expo/vector-icons";
 export default function Body() {
   return (
     <View style={style.boxMid}>
-      <Text style={style.welcomeText}>Bem-Vindo, Gabriel Dembelenda!</Text>
+      <Text style={style.welcomeText}>Bem Vindo, Gabriel Dembelenda!</Text>
       <Text style={style.infoText}>
         Atualmente, você possui 2 agendamentos.
       </Text>
 
       <View style={style.featuresContainer}>
+        <TouchableOpacity
+          style={style.featureItem}
+          activeOpacity={0.7}
+          onPress={() => console.log("Encontre por perto clicado")}
+        >
+          <View style={style.featureIconCircle}>
+            <Ionicons name="location-outline" size={30} color="#142c44" />
+          </View>
+          <Text style={style.featureText}>Encontre{"\n"}por perto</Text>
+        </TouchableOpacity>
 
-  <View style={style.featureItem}>
-    <View style={style.featureIconCircle}>
-      <Ionicons name="location-outline" size={30} color="#142c44" />
-    </View>
-    <Text style={style.featureText}>Encontre{'\n'}por perto</Text>
-  </View>
+        <TouchableOpacity
+          style={style.featureItem}
+          activeOpacity={0.7}
+          onPress={() => console.log("Reserve em segundos clicado")}
+        >
+          <View style={style.featureIconCircle}>
+            <Ionicons name="time-outline" size={30} color="#142c44" />
+          </View>
+          <Text style={style.featureText}>Reserve em{"\n"}segundos</Text>
+        </TouchableOpacity>
 
-  
-  <View style={style.featureItem}>
-    <View style={style.featureIconCircle}>
-      <Ionicons name="time-outline" size={30} color="#142c44" />
-    </View>
- <Text style={style.featureText}>Reserve em{'\n'}segundos</Text>
-  </View>
+        <TouchableOpacity
+          style={style.featureItem}
+          activeOpacity={0.7}
+          onPress={() => console.log("Jogue com amigos clicado")}
+        >
+          <View style={style.featureIconCircle}>
+            <Ionicons name="people-outline" size={30} color="#142c44" />
+          </View>
+          <Text style={style.featureText}>Jogue com{"\n"}amigos</Text>
+        </TouchableOpacity>
+      </View>
 
-  <View style={style.featureItem}>
-    <View style={style.featureIconCircle}>
-      <Ionicons name="people-outline" size={30} color="#142c44" />
-    </View>
-  <Text style={style.featureText}>Jogue com{'\n'}amigos</Text>
-  </View>
-</View>
       <Text style={style.bestQuadras}>Melhores quadras</Text>
+
       <ScrollView>
-                <View style={style.cardQuadra}>
+        <TouchableOpacity
+          style={style.cardQuadra}
+          activeOpacity={0.7}
+          onPress={() => console.log("Top Sports clicado")}
+        >
           <Image source={TopSports} style={style.Atlanta} />
           <View style={style.infoQuadra}>
             <Text style={style.nameQuadra}>Top Sports</Text>
@@ -60,8 +76,13 @@ export default function Body() {
               <Text style={style.reviewsCount}> (16 Avaliações)</Text>
             </View>
           </View>
-        </View>
-        <View style={style.cardQuadra}>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={style.cardQuadra}
+          activeOpacity={0.7}
+          onPress={() => console.log("Atlanta Esportes clicado")}
+        >
           <Image source={Atlanta} style={style.Atlanta} />
           <View style={style.infoQuadra}>
             <Text style={style.nameQuadra}>Atlanta Esportes</Text>
@@ -74,8 +95,13 @@ export default function Body() {
               <Text style={style.reviewsCount}> (37 Avaliações)</Text>
             </View>
           </View>
-        </View>
-        <View style={style.cardQuadra}>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={style.cardQuadra}
+          activeOpacity={0.7}
+          onPress={() => console.log("Ipiranga Sportes clicado")}
+        >
           <Image source={Ipiranga} style={style.Atlanta} />
           <View style={style.infoQuadra}>
             <Text style={style.nameQuadra}>Ipiranga Sportes</Text>
@@ -88,8 +114,13 @@ export default function Body() {
               <Text style={style.reviewsCount}> (161 Avaliações)</Text>
             </View>
           </View>
-        </View>
-        <View style={style.cardQuadra}>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          style={style.cardQuadra}
+          activeOpacity={0.7}
+          onPress={() => console.log("Meia Roda Court clicado")}
+        >
           <Image source={meiaRoda} style={style.Atlanta} />
           <View style={style.infoQuadra}>
             <Text style={style.nameQuadra}>Meia Roda Court</Text>
@@ -102,7 +133,7 @@ export default function Body() {
               <Text style={style.reviewsCount}> (86 Avaliações)</Text>
             </View>
           </View>
-        </View>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );

@@ -14,7 +14,7 @@ export default function TabBar() {
         onPress={() => navigation.navigate("Home")}
       >
         <Ionicons name="home-outline" size={24} color="#fff" />
-        <Text style={style.navText}>InÃ­cio</Text>
+        <Text style={style.navText}>Iní­cio</Text>
       </TouchableOpacity>
 
       <TouchableOpacity 

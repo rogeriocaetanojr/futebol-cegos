@@ -4,8 +4,6 @@ import TabBar from "../../components/tabBar";
 import { Ionicons } from "@expo/vector-icons";
 import { style } from "./styles";
 
-
-
 const MOCK_DATA = [
   {
     id: "1",
@@ -52,8 +50,8 @@ const MOCK_DATA = [
     price: 180,
     logo: require("../../assets/imgjb.png"),
   },
-  // Adicione mais quadras aqui...
 ];
+
 type QuadraProps = {
   id: string;
   name: string;
@@ -66,9 +64,12 @@ type QuadraProps = {
 
 export default function Quadras() {
   const renderQuadraCard = ({ item }: { item: QuadraProps }) => (
-    <View style={style.cardContainer}>
+    <TouchableOpacity
+      style={style.cardContainer}
+      activeOpacity={0.7}
+      onPress={() => console.log(`Quadra clicada: ${item.name}`)}
+    >
       <Image source={item.logo} style={style.cardLogo} />
-
       <View style={style.cardInfoColumn}>
         <Text style={style.cardTitle}>{item.name}</Text>
         <Text style={style.cardAddress} numberOfLines={2}>
@@ -80,42 +81,42 @@ export default function Quadras() {
           <Text style={style.cardReviewsText}>({item.reviews} avaliações)</Text>
         </View>
       </View>
-
       <View style={style.cardPriceColumn}>
         <Text style={style.cardPrice}>R${item.price}</Text>
         <Text style={style.cardPriceLabel}>/hora</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 
   return (
     <View style={{ flex: 1, backgroundColor: "#fff" }}>
       <View style={style.localHeader}>
-  <Ionicons name="football-outline" size={24} color="#fff" />
-  <Text style={style.headerTitle}>Encontre sua quadra</Text>
-</View>
+        <Ionicons name="football-outline" size={24} color="#fff" />
+        <Text style={style.headerTitle}>Encontre sua quadra</Text>
+      </View>
+
       <View style={style.bodyContainer}>
         <View style={style.searchContainer}>
-  <Ionicons name="search-outline" size={20} color="#888" style={style.searchIcon} />
-  <TextInput
-    style={style.searchInput}
-    placeholder="Procure por quadras"
-    placeholderTextColor="#888"
-  />
-</View>
+          <Ionicons name="search-outline" size={20} color="#888" style={style.searchIcon} />
+          <TextInput
+            style={style.searchInput}
+            placeholder="Procure por quadras"
+            placeholderTextColor="#888"
+          />
+        </View>
 
         <View style={style.filterContainer}>
-          <TouchableOpacity style={style.filterButton}>
+          <TouchableOpacity style={style.filterButton} activeOpacity={0.7}>
             <Text style={style.filterText}>Todos os tipos</Text>
             <Ionicons name="chevron-down-outline" size={16} color="#333" />
           </TouchableOpacity>
-          <TouchableOpacity style={style.filterButton}>
+          <TouchableOpacity style={style.filterButton} activeOpacity={0.7}>
             <Text style={style.filterText}>Todos tamanhos</Text>
             <Ionicons name="chevron-down-outline" size={16} color="#333" />
           </TouchableOpacity>
         </View>
 
-        <Text style={style.resultsTitle}> 5 quadras encontradas na região</Text>
+        <Text style={style.resultsTitle}>5 quadras encontradas na região</Text>
 
         <FlatList
           data={MOCK_DATA}

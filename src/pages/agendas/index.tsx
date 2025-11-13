@@ -3,6 +3,7 @@ import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
 import TabBar from "../../components/tabBar";
 import { Ionicons } from "@expo/vector-icons";
 import { style } from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 const MOCK_AGENDAS = [
   {
@@ -40,16 +41,31 @@ type AgendaProps = {
 
 export default function Agendas() {
   const [activeTab, setActiveTab] = useState(0);
+  const navigation = useNavigation<any>();
 
   const renderAgendaCard = ({ item }: { item: AgendaProps }) => (
-    <View style={style.cardContainer}>
+    <TouchableOpacity
+      style={style.cardContainer}
+      activeOpacity={0.8}
+      onPress={() => {
+        if (item.id === "1") {
+          console.log(`Card 1 (${item.title}) clicado — navegação desativada.`);
+          return;
+        }
+        navigation.navigate("Contato", { quadra: item });
+      }}
+    >
       <Image source={item.logo} style={style.cardLogo} />
       <View style={style.cardInfo}>
-        <Text style={style.cardTitle} numberOfLines={1}>{item.title}</Text>
+        <Text style={style.cardTitle} numberOfLines={1}>
+          {item.title}
+        </Text>
+
         <View style={style.cardDetailRow}>
           <Ionicons name="location-sharp" size={14} color="#777" />
           <Text style={style.cardDetailText}>{item.local}</Text>
         </View>
+
         <View style={style.cardDetailRow}>
           <Ionicons name="calendar-outline" size={14} color="#777" />
           <Text style={style.cardDetailText}>{item.date}</Text>
@@ -61,6 +77,7 @@ export default function Agendas() {
           />
           <Text style={style.cardDetailText}>{item.time}</Text>
         </View>
+
         <View style={style.cardDetailRow}>
           <Ionicons name="people-outline" size={14} color="#777" />
           <Text style={style.cardDetailText}>
@@ -68,10 +85,11 @@ export default function Agendas() {
           </Text>
         </View>
       </View>
+
       <View style={style.cardPriceContainer}>
         <Text style={style.cardPrice}>R$ {item.price.toFixed(2)}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 
   return (
@@ -82,8 +100,13 @@ export default function Agendas() {
       </View>
 
       <View style={style.bodyContainer}>
+        {/* Estatísticas */}
         <View style={style.statsContainer}>
-          <View style={style.statCard}>
+          <TouchableOpacity
+            style={style.statCard}
+            activeOpacity={0.7}
+            onPress={() => console.log("Card Próximas clicado")}
+          >
             <Ionicons
               name="calendar-outline"
               size={28}
@@ -92,8 +115,13 @@ export default function Agendas() {
             />
             <Text style={style.statValue}>2</Text>
             <Text style={style.statLabel}>Próximas</Text>
-          </View>
-          <View style={style.statCard}>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={style.statCard}
+            activeOpacity={0.7}
+            onPress={() => console.log("Card Jogadas clicado")}
+          >
             <Ionicons
               name="checkbox-outline"
               size={28}
@@ -102,8 +130,13 @@ export default function Agendas() {
             />
             <Text style={style.statValue}>36</Text>
             <Text style={style.statLabel}>Jogadas</Text>
-          </View>
-          <View style={style.statCard}>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={style.statCard}
+            activeOpacity={0.7}
+            onPress={() => console.log("Card Gastos clicado")}
+          >
             <Ionicons
               name="cash-outline"
               size={28}
@@ -112,9 +145,10 @@ export default function Agendas() {
             />
             <Text style={style.statValue}>R$ 648</Text>
             <Text style={style.statLabel}>Gastos</Text>
-          </View>
+          </TouchableOpacity>
         </View>
 
+        {/* Tabs */}
         <View style={style.tabContainer}>
           <TouchableOpacity onPress={() => setActiveTab(0)}>
             <Text
@@ -123,6 +157,7 @@ export default function Agendas() {
               Próximos (2)
             </Text>
           </TouchableOpacity>
+
           <TouchableOpacity onPress={() => setActiveTab(1)}>
             <Text
               style={[style.tabText, activeTab === 1 && style.tabTextActive]}
@@ -130,6 +165,7 @@ export default function Agendas() {
               Histórico (36)
             </Text>
           </TouchableOpacity>
+
           <TouchableOpacity onPress={() => setActiveTab(2)}>
             <Text
               style={[style.tabText, activeTab === 2 && style.tabTextActive]}
@@ -139,6 +175,7 @@ export default function Agendas() {
           </TouchableOpacity>
         </View>
 
+        {/* Lista de Agendas */}
         <FlatList
           data={MOCK_AGENDAS}
           renderItem={renderAgendaCard}
