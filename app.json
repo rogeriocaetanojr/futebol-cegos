@@ -13,7 +13,10 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyB1-gU8-zmdY9y-Ow_0aSX_mxw69tHDi94"
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -21,7 +24,14 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyB1-gU8-zmdY9y-Ow_0aSX_mxw69tHDi94"
+        }
+      },
+      "package": "com.futcego.app"
+      
     },
     "web": {
       "favicon": "./assets/favicon.png"
