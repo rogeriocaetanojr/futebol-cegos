@@ -4,11 +4,16 @@
 
 🔨 Funcionalidades do Projeto
 
-Nesta parte do projeto, estruturamos o fluxo de navegação do Futenai – Futebol de Cego, permitindo que o usuário explore quadras, acesse informações e entre em contato de forma intuitiva.
+* Navegação entre telas com React Navigation.
+* Listagem de quadras com imagem, endereço, avaliação e preço.
+* Busca e filtros de quadras.
+* Exibição de agendamentos com abas (Próximos, Histórico, Cancelados).
+* Cards interativos e estatísticas clicáveis.
+* Tela de contato com informações da quadra selecionada.
+* Barra de navegação inferior (TabBar) para acesso rápido às principais telas.
 
 
-
-✔️ Técnicas e Tecnologias Utilizadas
+✔️ Tecnologias Utilizadas
 Durante o desenvolvimento deste projeto, utilizamos e implementamos as seguintes tecnologias:
 
     * React Native com TypeScript.
