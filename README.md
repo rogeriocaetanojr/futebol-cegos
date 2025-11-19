@@ -1,6 +1,6 @@
 ⚽ Futenai: Futebol de Cego — App de Agendamento e Descoberta de Quadras de Futebol.
 
-![alt text](<print do app.jpg>)
+![alt text](./src/assets/printdopp.png)
 
 🔨 Funcionalidades do Projeto
 
